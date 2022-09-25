@@ -24,9 +24,11 @@ body {
     position: absolute;
     text-align: center;
     width: 35vw;
+    padding: 5vw 0;
     margin-top: 15%;
     font-size: 3em;
     background-color: #443c3c;
+    opacity: 50%;
     color: #FFF;
 }
 
@@ -37,7 +39,6 @@ body {
     width: 35vw;
     z-index: -1;
 }
-
 
 /* Right side */
 .right {
@@ -59,19 +60,26 @@ body {
 }
 
 /*Form*/
-.form {
-    display: flex;
-    background-color: #FFF;
-    height: 20vw;
+
+form {
     width: 65vw;
-    margin: 80px 0px;
-    padding: 80px 0px 80px 80px
 }
 
 legend {
     font-size: 1.8em;
     font-weight: bold;
 
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(255, 255, 255);
+    padding: 80px 0px 80px 80px
+}
+
+.left-column {
+    margin-right: 50px;
 }
 
 .inputs {
@@ -102,6 +110,9 @@ input:focus {
 }
 
 /*Login section*/
+.login {
+    font-size: 1.5em;
+}
 .btn {
     border: none;
     border-radius: 15px;
