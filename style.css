@@ -16,28 +16,39 @@ body {
     display: flex;
     justify-content: center;
 }
-.imageContainer {
-    width: 35vw;
-    display: flex;
-}
-.imageText {
-    position: absolute;
-    text-align: center;
-    width: 35vw;
-    padding: 5vw 0;
-    margin-top: 15%;
-    font-size: 3em;
-    background-color: #443c3c;
-    opacity: 50%;
-    color: #FFF;
-}
 
 .image {
     background-position: center;
     background-size: auto;
     background-repeat: no-repeat;
     width: 35vw;
+    z-index: -2;
+}
+
+.imageContainer {
+    width: 35vw;
+    display: flex;
+}
+
+.imageText {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    width: 35vw;
+    margin-top: 15%;
+    color: #FFF;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5vw 0;
+}
+
+.logo {
+    margin-left: 180px;
+    height: 5vw;
     z-index: -1;
+}
+.logo-text {
+    color: white;
+    font-size: 5em;
 }
 
 /* Right side */
@@ -51,7 +62,6 @@ body {
 .main-text {
     font-size: 1.8em;
     font-weight: bold;
-    margin-top: 5vw;
     padding: 50px 300px 50px 80px;
 }
 
@@ -60,22 +70,21 @@ body {
 }
 
 /*Form*/
-
 form {
-    width: 65vw;
+    padding: 50px 0px 50px 80px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 5px 10px #c2c2c2;
 }
 
 legend {
     font-size: 1.8em;
     font-weight: bold;
-
+    margin-bottom: 20px;
 }
 
 .form {
     display: flex;
     flex-direction: row;
-    background-color: rgb(255, 255, 255);
-    padding: 80px 0px 80px 80px
 }
 
 .left-column {
@@ -96,11 +105,10 @@ legend {
     border-style: solid;
     padding: 5px 100px 5px 5px;
     margin-bottom: 25px;
-    border-width: 2px;
+    border-width: 1px;
     border-radius: 5px;
     font-weight: bold;
     border-color: #bebebe;
-    
 }
 
 input:focus {
@@ -108,11 +116,19 @@ input:focus {
     border-color: #2681e9;
     box-shadow: 5px 5px 10px #c2c2c2;
 }
+input:invalid:focus {
+    border: 2px solid rgb(255, 69, 100)
+}
+  
+input:focus:valid {
+    border: #2681e9 2px solid;
+}
 
 /*Login section*/
 .login {
     font-size: 1.5em;
 }
+
 .btn {
     border: none;
     border-radius: 15px;
@@ -124,6 +140,10 @@ input:focus {
     color: white;
     cursor: pointer;
 }
+
+.btn:active {
+    transform: translateY(2px);
+  }
 
 .login-box {
     display: flex;

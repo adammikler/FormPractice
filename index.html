@@ -10,8 +10,11 @@
 <body>
     <div class="left">
         <div class="imageContainer">
-            <div class="imageText">ODIN</div>
             <img src="/Images/halie-west-25xggax4bSA-unsplash.jpg" class="image">
+            <div class="imageText">
+                <div><img src="/Images/odin-lined.png" class="logo"></div>
+                <div class="logo-text">ODIN</div>          
+            </div>
         </div>
     </div>
     <div class="right">
@@ -23,41 +26,41 @@
 
             <p>You <em>know</em> you want to.</p>
         </div>
-        <form action="#">
+        <form action="#" id="form">
             <legend>Lets do this!</legend>
             <div class="form">    
                 <div class="left-column">
                     <div class="inputs">
                         <label for="FName">FIRST NAME</label>
-                        <input type="text" name="FName">
-                    </div>
-                    <div class="inputs">
-                        <label for="LName">LAST NAME</label>
-                        <input type="text" name="LName">
+                        <input type="text" name="FName" required>
                     </div>
                     <div class="inputs">
                         <label for="email">EMAIL</label>
-                        <input type="text" name="email">
+                        <input type="email" name="email" class="email" required>
+                    </div>
+                    <div class="inputs">
+                        <label for="password">PASSWORD</label>
+                        <input type="text" name="password" class="password" required>
                     </div>
                 </div>
                 <div class="right-column">
                     <div class="inputs">
-                        <label for="phone">PHONE NUMBER</label>
-                        <input type="text" name="phone">
+                        <label for="LName">LAST NAME</label>
+                        <input type="text" name="LName" required>
                     </div>
                     <div class="inputs">
-                        <label for="password">PASSWORD</label>
-                        <input type="text" name="password">
-                    </div>
+                        <label for="phone">PHONE NUMBER</label>
+                        <input type="text" name="phone" required>
+                    </div>               
                     <div class="inputs">
                         <label for="conpassword">CONFIRM PASSWORD</label>
-                        <input type="text" name="conpassword">
+                        <input type="text" name="conpassword" required>
                     </div>
                 </div>
             </div>
         </form>
         <footer>
-            <button type="submit" class="btn">Create Account</button>
+            <button type="submit" form="form" class="btn">Create Account</button>
             <div class="login-box">
                 <p class="login">Already have an account?<a href="http://">Log in</a></p>
             </div>
